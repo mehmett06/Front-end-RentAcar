@@ -5,12 +5,20 @@ body, html {
     
   }
 
-  :host {
-    display: block;
-    height: 30%;
-    background: url('../assets/images/pexels-lanophotography-168938.jpg') no-repeat center center fixed ;
-    background-size: cover;
-  }
+  // :host {
+  //   display: block;
+  //   height: 30%;
+  //   background: url('../assets/images/pexels-lanophotography-168938.jpg') no-repeat center center fixed ;
+  //   background-size: cover;
+  // }
+  
+    :host {
+      display: block;
+      height: 100%;
+      background: rgba(30, 38, 85, 0.116);
+      background-size: cover;
+    }
+  
 
   .container {
     display: flex;
