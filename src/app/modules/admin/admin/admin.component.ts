@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { NavItem, NavTitle, NavbarComponent } from '../../../shared/components/navbar/navbar.component';
-import { HomeLayoutComponent } from '../../../shared/layouts/home-layout/home-layout.component';
 import { StorageService } from '../../../auth/services/storage/storage.service';
 
 @Component({
@@ -22,11 +21,11 @@ export class AdminComponent {
 
   constructor(private router: Router){}
 
-  navTitle : NavTitle = { text: 'Quadriga Rental', routerLink: '/'}
+  navTitle : NavTitle = { text: 'Mynex Rental', routerLink: '/'}
   navItems : NavItem[] = [
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about' },
-    { label: 'Contact', link: 'mailto:ahmetcetinkaya@tutamail.com' },
+    { label: 'Contact', link: 'mailto:baymehmetduman@gmail.com' },
     { label: 'Management', link: '/management' },
     { label: 'Brands Management', link: '/management/brands' },
     { label: 'Models Management', link: '/management/models' },

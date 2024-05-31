@@ -21,11 +21,11 @@ export class CustomerComponent {
 
   constructor(private router: Router){}
 
-  navTitle : NavTitle = { text: 'Quadriga Rental', routerLink: '/'}
+  navTitle : NavTitle = { text: 'Mynex Rental', routerLink: '/'}
   navItems : NavItem[] = [
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about' },
-    { label: 'Contact', link: 'mailto:ahmetcetinkaya@tutamail.com' },
+    { label: 'Contact', link: 'mailto:baymehmetduman@gmail.com' },
     { label: 'Management', link: '/management' },
     { label: 'Brands Management', link: '/management/brands' },
     { label: 'Models Management', link: '/management/models' },
