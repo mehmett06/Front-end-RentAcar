@@ -13,6 +13,7 @@
 
 export interface GetModelByIdResponse { 
     id?: number;
+    imageUrl?: string;
     name?: string;
     brandId?: number;
     fuelId?: number;

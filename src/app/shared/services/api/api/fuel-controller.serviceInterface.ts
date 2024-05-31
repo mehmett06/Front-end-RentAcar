@@ -29,6 +29,10 @@ export interface Add1RequestParams {
     createFuelRequest: CreateFuelRequest;
 }
 
+export interface DeleteFuelByIdRequestParams {
+    id: number;
+}
+
 export interface GetFuelByIdRequestParams {
     id: number;
 }
@@ -49,6 +53,13 @@ export interface FuelControllerServiceInterface {
 * @param requestParameters
      */
     add1(requestParameters: Add1RequestParams, extraHttpRequestParams?: any): Observable<CreateFuelResponse>;
+
+    /**
+     * 
+     * 
+* @param requestParameters
+     */
+    deleteFuelById(requestParameters: DeleteFuelByIdRequestParams, extraHttpRequestParams?: any): Observable<{}>;
 
     /**
      * 

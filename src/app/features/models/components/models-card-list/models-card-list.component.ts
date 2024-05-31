@@ -19,6 +19,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ModelsCardListComponent extends ModelsListBaseComponent implements OnInit {
   @Input() brandId: number | null = null;
+  imageUrl :any;
 
   get filteredModels(): GetAllModelResponse[] {
     let newList: GetAllModelResponse[] = this.models;
@@ -34,6 +35,7 @@ export class ModelsCardListComponent extends ModelsListBaseComponent implements 
     private brandsService: BrandControllerService,
     private fuelsService: FuelControllerService,
     private transmissionsService: TransmissionControllerService,
+    private imageUrlService:ModelControllerService,
     change: ChangeDetectorRef
   ) {
     super(modelControllerService, change);
@@ -47,6 +49,7 @@ export class ModelsCardListComponent extends ModelsListBaseComponent implements 
   brands: GetAllBrandResponse[] = [];
   fuels: GetAllFuelResponse[] = [];
   transmissions: GetAllTranmissionResponse[] = [];
+  imageUrls:GetAllModelResponse[]=[];
 
   getModelRelations(): void {
     // Brand
@@ -60,6 +63,12 @@ export class ModelsCardListComponent extends ModelsListBaseComponent implements 
       this.fuels = fuels;
       this.change.markForCheck();
     });
+    
+    //imageUrl
+    this.imageUrlService.getAllModels().subscribe((imageUrls) =>{
+      this.imageUrls = imageUrls;
+      this.change.markForCheck();
+    })
 
     // Transmission
     this.transmissionsService
@@ -77,6 +86,11 @@ export class ModelsCardListComponent extends ModelsListBaseComponent implements 
       this.fuels.find((f) => f.id === model.fuelId)?.name
     }, Transmission: ${
       this.transmissions.find((t) => t.id === model.transmissionId)?.name
-    }`;
+    },
+    ImageUrl: ${
+      this.imageUrls.find((u) => u.imageUrl === model.imageUrl)?.imageUrl }
+    `;
   }
 }
+  
+  

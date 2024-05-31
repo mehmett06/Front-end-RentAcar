@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
+
+<div class="row">
+    @for (car of filteredCars; track $index)     
+    {
+        <div class="card" style="width: 18rem;">
+          <img class="fab" src="../../../../assets/images/arac-kiralama.jpg" alt="">
+
+            <div class="card-body">
+              
+              <p class="card-text"><b>Year: </b> {{car.modelYear}} </p>
+              <p class="card-text"><b>State: </b> {{car.state}} </p>
+              <p class="card-text"><b>Plate:</b>  {{car.plate}} </p>
+              <h3 class="card-text">dailyPrice: {{car.dailyPrice | currency}}  </h3>          
+              <button type="button" class="btn btn-primary"> Rent Now </button>
+            </div>
+        </div>
+      }
+  
+  </div>

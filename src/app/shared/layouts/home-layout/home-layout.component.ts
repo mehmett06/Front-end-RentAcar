@@ -24,6 +24,9 @@ export class HomeLayoutComponent {
     { label: 'Management', link: '/management' },
     { label: 'Brands Management', link: '/management/brands' },
     { label: 'Models Management', link: '/management/models' },
+    { label: 'Cars Management', link: '/management/cars' },
+    
+
   ];
 
 }

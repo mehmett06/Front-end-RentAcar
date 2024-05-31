@@ -1,0 +1,42 @@
+<table appTable>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ModelYear</th>
+        <th scope="col">DailyPrice</th>
+        <th scope="col">Plate</th>
+        <th scope="col">State</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      @for (car of cars; track $index) {
+      <tr>
+        <th scope="row"> {{car.id}} </th>
+        <td> {{car.dailyPrice}} </td>
+        <td> {{car.modelYear}} </td>
+        <td> {{car.plate}} </td>
+        <td> {{car.state}} </td>
+        <td>
+          <div class="d-flex justify-content-end">
+            <app-button 
+              [routerLink]="['/management/cars/edit', car.id]" 
+              variant="warning">
+              Edit
+            </app-button>
+            
+  
+  
+  
+            <app-button
+              class="ms-3" 
+              (click)="deleteCar(car.id!)"  
+              variant="danger">
+              Delete
+            </app-button>
+          </div>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
