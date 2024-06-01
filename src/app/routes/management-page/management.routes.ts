@@ -7,6 +7,9 @@ import { ManagementEditBrandPageComponent } from "./management-brands-page/manag
 import { ManagementModelsPageComponent } from "./management-models-page/management-models-page.component";
 import { ManagementCreateModelPageComponent } from "./management-models-page/management-create-model-page/management-create-model-page.component";
 import { ManagementEditModelPageComponent } from "./management-models-page/management-edit-model-page/management-edit-model-page.component";
+import { ManagementCarsPageComponent } from "./management-cars-page/management-cars-page.component";
+import { ManagementCreateCarPageComponent } from "./management-cars-page/management-create-car-page/management-create-car-page.component";
+import { ManagementEditCarPageComponent } from "./management-cars-page/management-edit-car-page/management-edit-car-page.component";
 
 export const managementRoutes: Routes = [
   {
@@ -41,6 +44,21 @@ export const managementRoutes: Routes = [
       {
         path: 'models/edit/:modelId', //dinamik olarak id gelecek demek ":"
         component: ManagementEditModelPageComponent,
+      },
+
+      {
+        path:'cars',
+        component:ManagementCarsPageComponent
+      },
+      
+      {
+        path:'cars/create',
+        component:ManagementCreateCarPageComponent
+      },
+      
+      {
+        path:'cars/edit/:carId',
+        component:ManagementEditCarPageComponent
       },
     ],
   },

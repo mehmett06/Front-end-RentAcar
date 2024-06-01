@@ -25,7 +25,7 @@ import { UpdateCarResponse } from '../model/models';
 import { Configuration }                                     from '../configuration';
 
 
-export interface Add2RequestParams {
+export interface CreateCarRequestParams {
     createCarRequest: CreateCarRequest;
 }
 
@@ -52,7 +52,7 @@ export interface CarControllerServiceInterface {
      * 
 * @param requestParameters
      */
-    add2(requestParameters: Add2RequestParams, extraHttpRequestParams?: any): Observable<CreateCarResponse>;
+    createCar(requestParameters: CreateCarRequestParams, extraHttpRequestParams?: any): Observable<CreateCarResponse>;
 
     /**
      * 
@@ -65,7 +65,7 @@ export interface CarControllerServiceInterface {
      * 
      * 
 */
-    getAll(extraHttpRequestParams?: any): Observable<Array<GetAllCarResponse>>;
+    getAllCars(extraHttpRequestParams?: any): Observable<Array<GetAllCarResponse>>;
 
     /**
      * 

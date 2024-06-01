@@ -7,7 +7,7 @@
 .about{
     height: 100vh;
     width: 100%;
-    background: white;
+    background: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
     padding: 0 10px;
 }
 .all-text{
-    width: 600px;
+    width: 1500px;
     max-width: 100%;
     padding: 0 10px;
 }
@@ -49,9 +49,9 @@
 }
 .all-text p{
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     color: #777777;
-    line-height: 30px;
+    line-height: 35px;
     margin-bottom: 35px;
 }
 @media screen and (max-width: 1250px){
@@ -65,12 +65,12 @@
         margin-top: 40px;
     }
 }
-@media screen and (max-width: 650px){
-    .about .main img{
-        margin-bottom: 35px;
-    }
-    .all-text h1{
-        font-size: 45px;
-        margin-bottom: 20px;
-    }
-}
+// @media screen and (max-width: 650px){
+//     .about .main img{
+//         margin-bottom: 35px;
+//     }
+//     .all-text h1{
+//         font-size: 45px;
+//         margin-bottom: 20px;
+//     }
+

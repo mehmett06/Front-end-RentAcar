@@ -1,0 +1,82 @@
+<form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+
+    @if (formMessage) {
+        <small> {{formMessage}} </small>
+    }
+
+    <div class="mt-3">
+        <label for="modelIdInput" class="form-text text-muted"> Model ID: </label>
+        <input
+            formControlName="modelId"
+            type="number"
+            placeholder="Model Id:"
+            id="modelIdInput"
+            class="ms-3"/>
+    </div>
+    <div class="mt-3">
+        <label for="modelYearInput" class="form-text text-muted"> modelYear:</label>
+        <input
+            formControlName="modelYear"
+            type="number"
+            placeholder="Please enter year:"
+            id="modelYearInput"
+            class="ms-3"/>
+    </div>
+
+    
+    <div class="mt-3">
+        <label for="plateInput" class="form-text text-muted"> Plate: </label>
+        <input
+            formControlName="plate"
+            type="text"
+            placeholder="Please enter plate:"
+            id="plateInput"
+            class="ms-3"/>
+    </div>
+    
+    <div class="mt-3">
+        <label for="dailyprice" class="form-text text-muted"> Price: </label>
+        <input
+            formControlName="dailyprice"
+            type="number"
+            placeholder="Please enter price:"
+            id="dailyprice"
+            class="ms-3"/>
+    </div>
+    <div class="form-group">
+        <label for="stateInput" class="form-label">State:</label>
+            <select formControlName="state" id="stateInput" class="form-control">
+                <option value="1">Available</option>
+                <option value="2">Rented</option>
+                <option value="3">Under Maintenance</option>
+            </select>
+    </div>
+    <div class="mt-3">
+        <label for="descriptionInput" class="form-text text-muted"> Description: </label>
+        <input
+            formControlName="description"
+            type="text"
+            placeholder="Please description:"
+            id="descriptionInput"
+            class="ms-3"/>
+    </div>
+    <div class="form-group">
+        <label for="transmissionTypeIdInput" class="form-label"> Tranmission: </label>
+            <select formControlName="transmissionTypeId" id="transmissionTypeIdInput" class="form-control">
+                <option value="1">Manual</option>
+                <option value="2">Semi-Automatic</option>
+                <option value="3">Full-Automatic</option>
+            </select>
+    </div>
+    <div class="form-group">
+        <label for="fuelTypeIdInput" class="form-label"> Fuel Type: </label>
+            <select formControlName="fuelTypeId" id="fuelTypeIdInput" class="form-control">
+                <option value="1">Petrol</option>
+                <option value="2">Diesel</option>
+                <option value="3">Gas</option>
+                <option value="4">Hybrid</option>
+            </select>
+    </div>
+
+    <app-button type="submit" class="mt-3"> Create Car </app-button>   
+</form>

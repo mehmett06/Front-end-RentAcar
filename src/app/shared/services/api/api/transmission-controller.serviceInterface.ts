@@ -29,6 +29,10 @@ export interface AddRequestParams {
     createTransmissionRequest: CreateTransmissionRequest;
 }
 
+export interface DeleteTransmissionByIdRequestParams {
+    id: number;
+}
+
 export interface GetTransmissionByIdRequestParams {
     id: number;
 }
@@ -49,6 +53,13 @@ export interface TransmissionControllerServiceInterface {
 * @param requestParameters
      */
     add(requestParameters: AddRequestParams, extraHttpRequestParams?: any): Observable<CreateTranmissionResponse>;
+
+    /**
+     * 
+     * 
+* @param requestParameters
+     */
+    deleteTransmissionById(requestParameters: DeleteTransmissionByIdRequestParams, extraHttpRequestParams?: any): Observable<{}>;
 
     /**
      * 

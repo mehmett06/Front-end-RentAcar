@@ -4,6 +4,7 @@ export interface BrandListItemDto  {
   id: number;
   name: string;
   createdDate: Date | string; //backendden string olarak geleblir. biz oluşturursak da date olarak oluşturabiliriz.
+  imageUrl: String;
 }
 
 /*
